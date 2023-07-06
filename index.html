@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!--styles-->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/a76d23d87b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="./tasks.js"></script>
+
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="image-container">
+        <img src="./images/bg-desktop-dark.jpg" class="bg-image" />
+      </div>
+      <!--image container-->
+
+      <div class="main">
+        <div class="header">
+          <h2 class="header-text">TO DO</h2>
+          <i class="fa-solid fa-sun mode-icon"></i>
+        </div>
+
+        <div class="main-app">
+          <div class="create-inputs">
+            <span class="tick-container"></span
+            ><input
+              type="text"
+              placeholder="Create a new task"
+              class="todo-input todo-create"
+            />
+          </div>
+
+          <div class="created-tasks"></div>
+
+          <div class="app-footer">
+            <p class="items-left hover-footer">
+              <span class="items-no">0</span> item(s) left
+            </p>
+
+            <div class="tasks-selection">
+              <p
+                class="all-tasks hover-footer footer-action footer-action-active"
+              >
+                All
+              </p>
+              <p class="active-tasks hover-footer footer-action">Active</p>
+              <p class="completed-tasks hover-footer footer-action">
+                Completed
+              </p>
+            </div>
+
+            <p class="clear-completed hover-footer">Clear Completed</p>
+          </div>
+          <!--app footer-->
+        </div>
+        <!--main app-->
+      </div>
+      <!--main-->
+    </div>
+    <!--app-->
+  </body>
+</html>
