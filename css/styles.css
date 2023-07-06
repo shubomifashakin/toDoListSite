@@ -16,6 +16,13 @@
   background-color: var(--light-bg-color) !important;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 .app {
   height: 100vh;
   width: 100%;
@@ -231,4 +238,16 @@
 
 .hide-task {
   display: none !important;
+}
+
+/*mobile styles potrait*/
+@media (min-width: 0px) and (max-width: 767px) {
+  .app .image-container {
+    display: none;
+  }
+  .app .main {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
