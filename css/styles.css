@@ -2,7 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
   --dark-bg-color: #181824;
   --dark-text-color: #fff;
@@ -26,35 +26,23 @@ body {
 .app {
   height: 100vh;
   width: 100%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--dark-bg-color);
   transition: linear 0.3s;
 }
-.app .image-container {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.app .image-container .bg-image {
-  width: 100%;
-  transition: linear 0.3s;
-}
 .app .main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
+  box-sizing: border-box;
   height: 29rem;
   width: 30rem;
   display: flex;
   flex-direction: column;
 }
 .app .main .header {
-  flex-basis: 10%;
+  height: 10%;
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
 }
 .app .main .header .header-text {
   font-size: 2.25rem;
@@ -70,6 +58,7 @@ body {
   transition: linear 0.3s;
 }
 .app .main .main-app {
+  height: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -77,10 +66,9 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 3rem;
+  flex-basis: 10%;
   background-color: var(--dark-input-color);
   padding: 0.5rem 1rem;
-  border-radius: 5px;
   box-sizing: border-box;
   margin-bottom: 1em;
 }
@@ -104,10 +92,8 @@ body {
 }
 .app .main .main-app .created-tasks {
   width: 100%;
-  min-height: 3rem;
-  max-height: 18rem;
+  max-height: 80%;
   overflow-y: auto;
-  position: relative;
 }
 .app .main .main-app .created-tasks::-webkit-scrollbar {
   width: 0.3rem;
@@ -186,10 +172,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   width: 100%;
-  height: 3rem;
+  flex-basis: 10%;
   font-weight: 600;
   color: #555672;
   background-color: var(--dark-input-color);
@@ -242,11 +226,13 @@ body {
 
 /*mobile styles potrait*/
 @media (min-width: 0px) and (max-width: 767px) {
-  .app .image-container {
-    display: none;
+  .app {
+    padding: 1rem 0.5rem;
+    box-sizing: border-box;
   }
   .app .main {
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
     padding: 0 0.5rem;
   }

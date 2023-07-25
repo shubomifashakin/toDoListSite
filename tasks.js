@@ -1,6 +1,5 @@
 const imageEl = document.querySelector(".bg-image");
 const createInput = document.querySelector(".todo-create");
-const modeIcon = document.querySelector(".mode-icon");
 const closeIcon = document.querySelector(".close-icon");
 
 const appContainer = document.querySelector(".app");
@@ -129,28 +128,5 @@ appFooter.addEventListener("click", function (e) {
 
     //add the footer-action-active class to only the element that was clicked
     e.target.classList.add("footer-action-active");
-  }
-});
-
-//change the mode of the app
-modeIcon.addEventListener("click", function (e) {
-  if (e.target.classList.contains("fa-sun")) {
-    e.target.classList.remove("fa-sun");
-    e.target.classList.add("fa-moon");
-
-    // change the image
-    imageEl.src = "./images/bg-desktop-light.jpg";
-
-    //change to dark mode
-    appContainer.classList.toggle("light-mode");
-
-    //change text to dark color
-  } else {
-    e.target.classList.remove("fa-moon");
-    e.target.classList.add("fa-sun");
-    imageEl.src = "./images/bg-desktop-dark.jpg";
-
-    //change to light mode
-    appContainer.classList.toggle("light-mode");
   }
 });
